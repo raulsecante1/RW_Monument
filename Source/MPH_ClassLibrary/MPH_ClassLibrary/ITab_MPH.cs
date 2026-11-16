@@ -29,7 +29,9 @@ namespace MPH
 
             // 内容区域高度随尸体数量动态增长
             Rect viewRect = new Rect(0f, 0f, size.x - 20f, corpses.Count * 35f);
-            Widgets.BeginScrollView(new Rect(0f, 0f, size.x, size.y), ref scrollPosition, viewRect);
+            //y 从 0f 改为 24f，高度减少 24f，整体下移，避开"X"
+            Rect scrollOutRect = new Rect(0f, 24f, size.x, size.y - 24f);
+            Widgets.BeginScrollView(scrollOutRect, ref scrollPosition, viewRect);
 
             for (int i = 0; i < corpses.Count; i++)
             {
@@ -41,7 +43,7 @@ namespace MPH
                 Widgets.Label(new Rect(rowRect.x + 35f, rowRect.y, rowRect.width - 100f, 35f), corpse.LabelCap);
 
                 // “取出”按钮
-                if (Widgets.ButtonText(new Rect(rowRect.xMax - 60f, rowRect.y, 60f, 30f), "取出"))
+                if (Widgets.ButtonText(new Rect(rowRect.xMax - 60f, rowRect.y, 60f, 30f), "MPH_TakeOut".Translate()))
                 {
                     grave.StorageComp.RemoveCorpse(corpse);
                     GenPlace.TryPlaceThing(corpse, grave.Position, grave.Map, ThingPlaceMode.Near);

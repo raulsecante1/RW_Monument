@@ -9,7 +9,7 @@
         <designationCategory>Misc</designationCategory>
         
         <!-- MPH 属性 -->
-        <size>(3,3)</size>
+        <size>(3,2)</size>
         <costStuffCount>500</costStuffCount>
 
         <stuffCategories>
@@ -27,8 +27,9 @@
             <li Class="MPH.CompProperties_MPHStorage" />
         </comps>
         
-        <!-- 注册自定义 ITab -->
+        <!-- 注册自定义 ITab 和原版储存方案 -->
         <inspectorTabs>
+            <li>RimWorld.ITab_Storage</li>
             <li>MPH.ITab_MPH</li>
         </inspectorTabs>
 
@@ -36,6 +37,10 @@
             <texPath>Things/Building/MPH/MPH</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
             <drawSize>(3,3)</drawSize>
+            <!-- 分别设置四个方向的偏移，按需微调数值 -->
+            <drawOffsetNorth>(0, 0, 0.5)</drawOffsetNorth>
+            <drawOffsetSouth>(0, 0, 0.5)</drawOffsetSouth>
+
         </graphicData>
         
         <building>
@@ -45,9 +50,7 @@
                         <li>Corpses</li> <!-- 允许所有尸体 -->
                     </categories>
                 </filter>
-            </fixedStorageSettings>
-            <!-- 虽然我们用自己的List管理，但这里设大以防万一 -->
-            <maxItemsInCell>77</maxItemsInCell>
+            </fixedStorageSettings>  
         </building>
     </ThingDef>
 </Defs>
