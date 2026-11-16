@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="BuildingBase">
+        <defName>MPH_MultiGrave</defName>
+        <label>MPH</label>
+        <description>Description</description>
+        
+        <thingClass>MPH.Building_MPH</thingClass>
+        <designationCategory>Misc</designationCategory>
+        
+        <!-- MPH 属性 -->
+        <size>(3,3)</size>
+        <costStuffCount>500</costStuffCount>
+
+        <stuffCategories>
+            <li>Stony</li>
+        </stuffCategories>
+
+        <passability>PassThroughOnly</passability>
+
+        <useHitPoints>false</useHitPoints>
+
+        <tickerType>Rare</tickerType>
+
+        <!-- 注册自定义 Comp -->
+        <comps>
+            <li Class="MPH.CompProperties_MPHStorage" />
+        </comps>
+        
+        <!-- 注册自定义 ITab -->
+        <inspectorTabs>
+            <li>MPH.ITab_MPH</li>
+        </inspectorTabs>
+
+        <graphicData>
+            <texPath>Things/Building/MPH/MPH</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(3,3)</drawSize>
+        </graphicData>
+        
+        <building>
+            <fixedStorageSettings>
+                <filter>
+                    <categories>
+                        <li>Corpses</li> <!-- 允许所有尸体 -->
+                    </categories>
+                </filter>
+            </fixedStorageSettings>
+            <!-- 虽然我们用自己的List管理，但这里设大以防万一 -->
+            <maxItemsInCell>77</maxItemsInCell>
+        </building>
+    </ThingDef>
+</Defs>

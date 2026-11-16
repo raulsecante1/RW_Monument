@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+    <packageId>Leinad.MultiGraveMod</packageId>
+    <name>Multi-Corpse Grave</name>
+    <author>Leinad</author>
+    <description>A giant monument that capable to bury multiple bodies</description>
+    <supportedVersions>
+        <li>1.7</li>
+    </supportedVersions>
+</ModMetaData>

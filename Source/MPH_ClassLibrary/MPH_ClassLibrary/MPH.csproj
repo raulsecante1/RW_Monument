@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	  
+	<!-- 输出到模组根目录的 Assemblies，且不追加 net10.0 子文件夹 -->
+    <OutputPath>..\..\..\Assemblies\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\..\Steam\steamapps\common\RimWorld\Assembly-CSharp.dll</HintPath>
+	  <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityStubs">
+      <HintPath>..\..\..\..\..\Steam\steamapps\common\RimWorld\UnityStubs.dll</HintPath>
+	  <Private>false</Private>
+    </Reference>
+    <Reference Include="Waylith">
+      <HintPath>..\..\..\..\..\Steam\steamapps\common\RimWorld\Waylith.dll</HintPath>
+	  <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>

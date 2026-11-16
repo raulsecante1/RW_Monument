@@ -1,0 +1,7 @@
+#build files
+*.slnx
+Source/MPH_ClassLibrary/MPH_ClassLibrary/bin
+Source/MPH_ClassLibrary/MPH_ClassLibrary/obj
+
+#images
+*.png
